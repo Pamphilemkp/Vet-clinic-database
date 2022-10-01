@@ -50,3 +50,35 @@ ALTER TABLE animals
   FOREIGN KEY (owner_id)
   REFERENCES owners (id)
   ON DELETE SET NULL;
+
+  /*vet table created*/
+CREATE TABLE vets (
+    id INT GENERATED ALWAYS AS IDENTITY,
+    name TEXT,
+    age INT,
+    date_of_graduation  DATE,
+    PRIMARY KEY(id)
+  );
+
+ /*many to many table to handle the relationship between vets and species*/ 
+
+CREATE TABLE specializations (
+species_id int,
+vets_id int
+);
+
+ALTER TABLE specializations ADD PRIMARY KEY (species_id, vets_id);
+ALTER TABLE specializations ADD CONSTRAINT fk_species FOREIGN KEY (species_id) REFERENCES species (id);
+ALTER TABLE specializations ADD CONSTRAINT fk_vets FOREIGN KEY (vets_id) REFERENCES vets (id);
+
+ /*many to many table to handle the relationship between animals and vets*/ 
+ CREATE TABLE visits (
+    animals_id int,
+    vets_id int,
+    date_of_visit DATE
+ );
+
+
+ALTER TABLE visits ADD PRIMARY KEY (animals_id, vets_id, date_of_visit);
+ALTER TABLE visits ADD CONSTRAINT fk_animals FOREIGN KEY (animals_id) REFERENCES animals (id);
+ALTER TABLE visits ADD CONSTRAINT fk_vets FOREIGN KEY (vets_id) REFERENCES vets (id);
