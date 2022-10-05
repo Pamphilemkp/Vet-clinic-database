@@ -28,6 +28,10 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - Twitter: [pier_celestin](https://twitter.com/pier_celestin)
 - LinkedIn: [piercelestin](https://linkedin.com/in/piercelestinmax)
 
+👤 **Patrick Maina**
+- GitHub: [@PNdunguMaina](https://github.com/PNdunguMaina)
+- LinkedIn: [Patrick Maina](https://www.linkedin.com/in/pndungumaina/)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
