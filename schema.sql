@@ -90,3 +90,4 @@ ALTER TABLE owners ADD COLUMN email VARCHAR(120);
 -- Find a way to decrease the execution time of the first query. Look for hints in the previous lessons.
 CREATE INDEX vets_desc_index ON visits (vets_id DESC);
 CREATE INDEX owners_email_asc ON owners (email ASC);
+CREATE INDEX animals_desc_index ON visits (animals_id DESC);
