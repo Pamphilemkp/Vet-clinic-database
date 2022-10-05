@@ -21,6 +21,13 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - Twitter: [@twitterhandle](https://twitter.com/PamphileMusonda)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/pamphile-musonda)
 
+
+👤 **Author2**
+
+- GitHub: [Piercel2022](https://github.com/Piercel2022)
+- Twitter: [pier_celestin](https://twitter.com/pier_celestin)
+- LinkedIn: [piercelestin](https://linkedin.com/in/piercelestinmax)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
