@@ -73,12 +73,20 @@ ALTER TABLE specializations ADD CONSTRAINT fk_vets FOREIGN KEY (vets_id) REFEREN
 
  /*many to many table to handle the relationship between animals and vets*/ 
  CREATE TABLE visits (
+    id int GENERATED ALWAYS AS IDENTITY,
     animals_id int,
     vets_id int,
     date_of_visit DATE
  );
 
 
-ALTER TABLE visits ADD PRIMARY KEY (animals_id, vets_id, date_of_visit);
+ALTER TABLE visits ADD PRIMARY KEY (id);
 ALTER TABLE visits ADD CONSTRAINT fk_animals FOREIGN KEY (animals_id) REFERENCES animals (id);
 ALTER TABLE visits ADD CONSTRAINT fk_vets FOREIGN KEY (vets_id) REFERENCES vets (id);
+
+-- Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+-- Find a way to decrease the execution time of the first query. Look for hints in the previous lessons.
+CREATE INDEX vets_desc_index ON visits (vets_id DESC);
+CREATE INDEX owners_email_asc ON owners (email ASC);
